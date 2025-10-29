@@ -32,36 +32,6 @@ function Header() {
   }, []);
   return (
     <>
-     {/* <!-- preloader start --> */}
-    <div id="preloader" style={{display: 'none'}}>
-        <div id="ctn-preloader" className="ctn-preloader" style={{display: 'none'}}>
-            <div className="icon">
-              <img src="assets/img/logo/loader.png" alt="" className="m-auto d-block" width="60" />
-            </div>
-            <div className="txt-loading">
-                    <span data-text-preloader="E" className="letters-loading">
-                        E
-                    </span>
-                <span data-text-preloader="d" className="letters-loading">
-                        d
-                    </span>
-                <span data-text-preloader="u" className="letters-loading">
-                        u
-                    </span>
-                <span data-text-preloader="c" className="letters-loading">
-                        c
-                    </span>
-                <span data-text-preloader="a" className="letters-loading">
-                        a
-                    </span>
-                <span data-text-preloader="d" className="letters-loading">
-                        d
-                    </span>
-            </div>
-        </div>
-    </div>
-    {/* <!-- preloader end --> */}
-
     {/* <!-- shopping-cart-bar start --> */}
     <div className={`cart-menu-right cart-style-1 white-bg ${cart}`}>
         <div className="close-icon float-right" onClick={handleClickCart}>
@@ -141,8 +111,6 @@ function Header() {
         </div>
     </div>
     {/* <!-- shopping-cart-bar end --> */}
-
-
     {/* <!-- header start --> */}
     <header className="header-area header-style-2">
         <div className="header-top">
@@ -218,15 +186,8 @@ function Header() {
                     <div className="col-xl-9 col-lg-9 col-md-8 col-6 d-flex justify-content-end align-items-center">
                         <div className="main-menu d-none d-xl-block">
                                 <ul>
-                                    <li className="has-dropdown">
-                                        <a href="#">Home</a>
-                                        <ul className="sub-menu">
-                                            <li><a href="index.html">Home 1</a></li>
-                                            <li><a href="index-2.html">Home 2</a></li>
-                                            <li><a href="index-3.html">Home 3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about-us.html">About</a></li>
+                                    <li><Link to="/">Home</Link></li>
+                                    <li><Link to="/about">About</Link></li>
                                     <li className="has-dropdown">
                                         <a href="#">Course</a>
                                         <ul className="sub-menu">

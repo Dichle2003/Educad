@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import TestimonialSlider from "../components/TestimonialSlider";
 
 function Home() {
+    useEffect(() => {
+    document.title = "Home - Educad";
+  }, []);
   return (
     <>
       {/* <!-- hero start --> */}
