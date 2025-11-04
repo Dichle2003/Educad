@@ -30,6 +30,7 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  
   return (
     <>
     {/* <!-- shopping-cart-bar start --> */}
@@ -188,43 +189,50 @@ function Header() {
                                 <ul>
                                     <li><Link to="/">Home</Link></li>
                                     <li><Link to="/about">About</Link></li>
-                                    <li className="has-dropdown">
-                                        <a href="#">Course</a>
+                                    <li className="has-dropdow">
+                                        <a href="">Course
+                                            <i className="fa-solid fa-caret-down"></i>
+                                        </a>
                                         <ul className="sub-menu">
-                                            <li><a href="course-list.html">Course List</a></li>
-                                            <li><a href="course-grid.html">Course Grid</a></li>
-                                            <li><a href="course-details.html">Course Details</a></li>
+                                            <li><Link to="/course_list">Course List</Link></li>
+                                            <li><Link to="/course_grid">Course Grid</Link></li>
+                                            <li><Link to="/course_details">Course Details</Link></li>
                                         </ul>
                                     </li>
-                                    <li className="has-dropdown">
-                                        <a href="#">Pages</a>
+                                    <li className="has-dropdow">
+                                        <a href="#">Pages
+                                             <i className="fa-solid fa-caret-down"></i>
+                                        </a>
                                         <ul className="sub-menu">
-                                            <li><a href="faq.html">Faq</a></li>
-                                            <li><a href="instructors.html">Instructors</a></li>
-                                            <li><a href="instructors-details.html">Instructors Details</a></li>
-                                            <li className="has-dropdown">
-                                                <a href="#">Shop <span></span></a>
+                                            <li><Link to="/faq">FAQ</Link></li>
+                                            <li><Link to="/instructors">Instructors</Link></li>
+                                            <li><Link to ="/instructorsDetails">Instructors Details"</Link></li>
+                                            <li className="has-dropdow">
+                                                <a href="#">Shop
+                                                     <i className="fa-solid fa-caret-down"></i> <span></span></a>
                                                 <ul className="sub-menu">
-                                                    <li><a href="product.html">Product</a></li>
-                                                    <li><a href="product-details.html">Product Details</a></li>
+                                            <li><Link to="/product">Products</Link></li>
+                                            <li><Link to ='/productdetail'>Products Detail</Link></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="signup.html">Signup</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                            <li><a href="error.html">Error</a></li>
+                                            <li><Link to = "/login">Login</Link></li>
+                                            <li><Link to = "/signup">Sign Up</Link></li>
+                                            <li><Link to = "/cart">Cart</Link></li>
+                                            <li><Link to = "/checkout">Check Out</Link></li>
+                                            <li><Link to = "/error">Error</Link></li>
                                         </ul>
                                     </li>
-                                    <li className="has-dropdown">
-                                        <a href="#">Blogs</a>
+                                    <li className="has-dropdow">
+                                        <a href="#">Blogs
+                                             <i className="fa-solid fa-caret-down"></i>
+                                        </a>
                                         <ul className="sub-menu">
-                                            <li><a href="blog-classic.html">Blog Classic</a></li>
-                                            <li><a href="blog-grid.html">Blog Grid</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                            <li><Link to = "/blockclassic">Block Classic</Link></li>
+                                            <li><Link to = "/blockgrid">Block Grid</Link></li>
+                                            <li><Link to = "/blockdetails">Block Details</Link></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                            <li><Link to = "/contact">Contact</Link></li>
                                 </ul>
                             </div>
                         <div className="header-dropdown cat-menu-hide">
@@ -281,11 +289,11 @@ function Header() {
                     </a>
                 </div>
                 <div className="off-canvas-close" onClick={handleClick}>
-                  <i className="fa-regular fa-xmark"></i></div>
+                  <i className="fa-solid fa-xmark"></i></div>
             </div>
             <div className="off-canvas-menu mb-30">
                 <ul>
-                    <li className="has-dropdown"><span className="toggle-btn"><i className="icon"></i></span>
+                    <li className="has-dropdown"><span className="toggle-btn"><i className="fa-solid fa-v"></i></span>
                         <a href="#">Home</a>
                         <ul className="sub-menu">
                             <li><a href="index.html">Home 1</a></li>

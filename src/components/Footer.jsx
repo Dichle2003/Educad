@@ -4,9 +4,9 @@ function Footer() {
     <>
     <footer className="footer-section-2">
             <div className="footer-top-2 pt-80 pb-60 pt-lg-40 pb-lg-40 pt-md-40 pb-md-40 pt-xs-40 pb-xs-40">
-                <div className="container">
-                    <div className="row align-items-center justify-content-md-between justify-content-center">
-                        <div className="col-xl-4 col-lg-4 col-md-4 text-md-start text-center">
+                <div className="container" >
+                    <div className="row align-items-center justify-content-md-between justify-content-center" >
+                        <div className="col-xl-4 col-lg-4 col-md-4 text-md-start text-center" >
                             <div className="footer-logo">
                                 <img src="assets/img/logo/logo.svg" alt="logo" />
                             </div>

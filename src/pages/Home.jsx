@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect} from "react";
 import TestimonialSlider from "../components/TestimonialSlider";
-
+import { Link } from "react-router-dom";
 function Home() {
     useEffect(() => {
     document.title = "Home - Educad";
   }, []);
+ 
   return (
     <>
       {/* <!-- hero start --> */}
@@ -277,7 +278,7 @@ function Home() {
                                 </div>
                             </div>
                             <div className="theme-btn">
-                                <a href="about-us.html">Learn More</a>
+                                <Link to ="/instructorsDetails">Learn More</Link>
                             </div>
                         </div>
                     </div>
@@ -414,10 +415,10 @@ function Home() {
                             </div>
                             <div className="course-title">
                                 <h3>
-                                    <a href="course-details.html">
+                                    <Link to="/course_details">
                                         Beginner Diploma In Basic English
                                         Grammar - Better Search Rang!
-                                    </a>
+                                    </Link>
                                 </h3>
                             </div>
                             <div className="meta">
@@ -458,10 +459,10 @@ function Home() {
                             </div>
                             <div className="course-title">
                                 <h3>
-                                    <a href="course-details.html">
+                                    <Link to="/course_details">
                                         Visual Thinking: Drawing Data to
                                         communication of 2022
-                                    </a>
+                                    </Link>
                                 </h3>
                             </div>
                             <div className="meta">
@@ -494,7 +495,7 @@ function Home() {
                             </div>
                             <div className="category">
                                 <div className="btn-1">
-                                    <a href="course-details.html">Intermediate</a>
+                                    <Link to="/course_details">Intermediate</Link>
                                 </div>
                                 <div className="price">
                                     <p>Free</p>
@@ -502,10 +503,10 @@ function Home() {
                             </div>
                             <div className="course-title">
                                 <h3>
-                                    <a href="course-details.html">
+                                    <Link to="/course_details">
                                         The Challenge Of Global Learning
                                         Public Education.
-                                    </a>
+                                    </Link>
                                 </h3>
                             </div>
                             <div className="meta">
@@ -546,10 +547,10 @@ function Home() {
                             </div>
                             <div className="course-title">
                                 <h3>
-                                    <a href="course-details.html">
+                                    <Link to="/course_details">
                                         The Most Complete Design Thinki
                                         Course On The Market
-                                    </a>
+                                    </Link>
                                 </h3>
                             </div>
                             <div className="meta">
@@ -590,10 +591,10 @@ function Home() {
                             </div>
                             <div className="course-title">
                                 <h3>
-                                    <a href="course-details.html">
+                                    <Link to="/course_details">
                                         Completed Landing Page Design &amp;
                                         Conversion Rate 2022
-                                    </a>
+                                    </Link>
                                 </h3>
                             </div>
                             <div className="meta">
@@ -634,10 +635,10 @@ function Home() {
                             </div>
                             <div className="course-title">
                                 <h3>
-                                    <a href="course-details.html">
+                                    <Link to="/course_details">
                                         Completed Landing Page Design &amp;
                                         Conversion Rate 2022
-                                    </a>
+                                    </Link>
                                 </h3>
                             </div>
                             <div className="meta">
@@ -667,7 +668,7 @@ function Home() {
                 <div className="row text-center">
                     <div className="col-xl-12">
                         <div className="theme-btn aos-init" data-aos="fade-up" data-aos-delay="200">
-                            <a href="course-list.html">Browse All Course</a>
+                            <Link to="/course_details">Browse All Course</Link>
                         </div>
                     </div>
                 </div>
@@ -775,7 +776,7 @@ function Home() {
                             </div>
                             <div className="choose-btn-2">
                                 <div className="theme-btn">
-                                    <a href="signup.html">Register now</a>
+                                    <Link to="/signup">Register now</Link>
                                 </div>
                                 <div className="play-btn">
                                     <a href="https://www.youtube.com/watch?v=O5TdnuUhIgs&amp;ab_channel=Webflow"
@@ -866,7 +867,7 @@ function Home() {
                             </div>
                             <div className="content">
                                 <p className="sub-title">SEO Manager</p>
-                                <h3 className="title"><a href="instructors-details.html">Rovert Smith</a></h3>
+                                <h3 className="title"><Link to="/course_details">Rovert Smith</Link></h3>
                                 <div className="meta-separator"></div>
                                 <div className="meta">
                                     <div className="meta-item">
@@ -893,7 +894,7 @@ function Home() {
                             </div>
                             <div className="content">
                                 <p className="sub-title">Web Developer</p>
-                                <h3 className="title"><a href="instructors-details.html">Milier Hard</a></h3>
+                                <h3 className="title"><Link to ="/instructorsDetails">Milier Hard</Link></h3>
                                 <div className="meta-separator"></div>
                                 <div className="meta">
                                     <div className="meta-item">
@@ -919,7 +920,7 @@ function Home() {
                             </div>
                             <div className="content">
                                 <p className="sub-title">UI/UX Designer</p>
-                                <h3 className="title"><a href="instructors-details.html">Jaceka Jon</a></h3>
+                                <h3 className="title"><Link to ="/instructorsDetails">Jaceka Jon</Link></h3>
                                 <div className="meta-separator"></div>
                                 <div className="meta">
                                     <div className="meta-item">
@@ -945,7 +946,7 @@ function Home() {
                             </div>
                             <div className="content">
                                 <p className="sub-title">SEO Manager</p>
-                                <h3 className="title"><a href="instructors-details.html">Hardson Khan</a></h3>
+                                <h3 className="title"><Link to ="/instructorsDetails">Hardson Khan</Link></h3>
                                 <div className="meta-separator"></div>
                                 <div className="meta">
                                     <div className="meta-item">
@@ -962,7 +963,7 @@ function Home() {
                 <div className="row text-center mt-20">
                     <div className="col-xl-12">
                         <div className="theme-btn aos-init" data-aos="fade-up" data-aos-delay="200">
-                            <a href="instructors.html">All instructor</a>
+                            <Link to ="/instructorsDetails">All instructor</Link>
                         </div>
                     </div>
                 </div>
@@ -1222,7 +1223,7 @@ function Home() {
                 <div className="row text-center mt-20">
                     <div className="col-xl-12">
                         <div className="theme-btn aos-init" data-aos="fade-up" data-aos-delay="200">
-                            <a href="blog-grid.html">Read All Blogs</a>
+                            <Link to ="/instructorsDetails">Read All Blogs</Link>
                         </div>
                     </div>
                 </div>
