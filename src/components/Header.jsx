@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 function Header() {
+     const navigate = useNavigate();
   const [active, setActive] = useState("");
   const [cart, setCart] = useState("");
   const [isSticky, setIsSticky] = useState(false);
@@ -30,6 +32,23 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const handleLogout=async()=>{
+   
+    try {
+        const token = localStorage.getItem("token");
+    await axios.post("http://127.0.0.1:8000/api/logout", {},{
+        headers: {Authorization: `Bearer ${token}`}
+    });
+    localStorage.removeItem("token");
+    localStorage.removeItem("user")
+      alert("Đăng xuất thành công!");
+      navigate("/login");
+  }
+  catch (error) {
+    console.error("Lỗi khi đăng xuất:", error);
+  }
+   
+  }
   
   return (
     <>
@@ -132,7 +151,7 @@ function Header() {
                     </div>
                     <div className="col-xl-3 col-lg-6 col-md-6 col-6 text-end">
                         <div className="header-buttons justify-content-end">
-                            <a href="login.html">
+                            <a onClick={handleLogout}>
                                 <img src="assets/img/icon/user.svg" alt="icon" />
                             </a>
                             <a className="shopping-cart" href="javascript:void(0)" onClick={handleClickCart}>

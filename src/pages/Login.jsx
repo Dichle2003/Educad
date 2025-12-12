@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 const Login = () => {
@@ -8,27 +9,36 @@ const Login = () => {
    const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError('');
+  e.preventDefault();
+  setError('');
 
-    try {
-      const res = await axios.post('http://127.0.0.1:8000/api/login', {
-        
-        username: username,
-        password: password,
-      });
+  try {
+    const res = await axios.post('http://192.168.4.38:8000/api/login', {
+      username,
+      password,
+    });
 
-      
-      localStorage.setItem('token', res.data.token);
+    const { token, user } = res.data;
 
-      alert('Đăng nhập thành công!');
-      console.log('Token:', res.data.token);
-        navigate("/");
-    } catch (err) {
-      console.error(err);
-      setError('Đăng nhập thất bại. Vui lòng kiểm tra lại tài khoản/mật khẩu.');
+    localStorage.setItem('token', token);
+    localStorage.setItem('user', JSON.stringify(user));
+
+    alert('Đăng nhập thành công!');
+
+    if (user.role === 'admin') {
+      navigate('/ad');
+      window.location.href = "/ad";
+
+    } else {
+      navigate('/home');
+       window.location.href = "/home";
     }
-  };
+  } catch (err) {
+    console.error(err);
+    setError('Đăng nhập thất bại. Vui lòng kiểm tra lại tài khoản/mật khẩu.');
+  }
+};
+
 
   useEffect(() => {
     document.title = 'Login - Educad';
@@ -117,12 +127,13 @@ const Login = () => {
                       </div>
 
                       <div className="redirect-section text-center">
-                        <p className="mt-40">
+                            <Link to = "/signup">
+                                <p className="mt-40">
                           Don’t have an account?{' '}
-                          <b>
-                            <a href="signup.html">Sign up Today</a>
-                          </b>
+                         
                         </p>
+                            
+                            </Link>
                         <h5 className="text-heading">Forgot password</h5>
                       </div>
                     </div>
